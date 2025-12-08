@@ -1,0 +1,307 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.App-header nav {
+  margin-top: 15px;
+}
+
+.App-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.App-header nav a:hover {
+  background-color: #4a4f59;
+}
+
+.App-content {
+  padding: 20px;
+  min-height: 500px; /* グラフの縦幅を確保するため */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  width: 100%;
+  max-width: 900px; /* Home画面と同じような横幅 */
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #282c34;
+  font-size: 1.8em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* TransactionForm Styles */
+.transaction-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.transaction-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.transaction-form input[type="date"],
+.transaction-form input[type="text"],
+.transaction-form input[type="number"],
+.transaction-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* パディングとボーダーを幅に含める */
+}
+
+.transaction-form button {
+  grid-column: span 2; /* ボタンを2カラムにまたがせる */
+  background-color: #61dafb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-form button:hover {
+  background-color: #21a1f1;
+}
+
+/* TransactionList Styles */
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transaction-list th,
+.transaction-list td {
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.transaction-list th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.transaction-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transaction-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+.transaction-list button {
+  background-color: #ff4d4d; /* 赤色系の削除ボタン */
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-list button:hover {
+  background-color: #cc0000;
+}
+
+.transaction-list .edit-button {
+  background-color: #4CAF50; /* 緑系の編集ボタン */
+  margin-right: 5px;
+}
+
+.transaction-list .edit-button:hover {
+  background-color: #45a049;
+}
+
+.transaction-list .save-button {
+  background-color: #008CBA; /* 青系の保存ボタン */
+  margin-right: 5px;
+}
+
+.transaction-list .save-button:hover {
+  background-color: #007bb5;
+}
+
+.transaction-list .cancel-button {
+  background-color: #f44336; /* 赤系のキャンセルボタン */
+}
+
+.transaction-list .cancel-button:hover {
+  background-color: #da190b;
+}
+
+.transaction-list input[type="date"],
+.transaction-list input[type="text"],
+.transaction-list select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ExpenseSummary Styles */
+.expense-summary {
+  margin-top: 0; /* MainLayoutのpaddingで調整されるため */
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.month-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.month-navigation h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.month-navigation button {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.month-navigation button:hover {
+  background-color: #e0e0e0;
+}
+
+.expense-content {
+  display: grid; /* flexからgridに変更 */
+  grid-template-columns: 1fr 1fr; /* 2つのカラムを定義 */
+  gap: 30px;
+  align-items: flex-start;
+  min-height: 450px;
+  /* justify-content: center; はgridでは不要 */
+}
+
+.no-data-message {
+  grid-column: span 2; /* 2つのカラムにまたがる */
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.expense-table {
+  /* flex: 1; はgridでは不要 */
+  min-width: 300px;
+}
+
+.expense-summary table {
+  margin-top: 0;
+}
+
+.expense-summary th,
+.expense-summary td {
+  padding: 15px 20px; /* パディングを増やす */
+  text-align: left;
+  font-size: 1.1em; /* フォントサイズを少し大きく */
+}
+
+.expense-summary th:nth-child(2),
+.expense-summary td:nth-child(2) { /* 金額列の調整 */
+  text-align: right;
+}
+
+.expense-summary th:nth-child(3),
+.expense-summary td:nth-child(3) { /* 割合列の調整 */
+  text-align: right;
+  width: 100px; /* 割合列の幅を固定 */
+}
+
+.chart-container {
+  position: relative;
+  /* flex: 1; はgridでは不要 */
+  min-width: 300px; /* グラフの最小幅 */
+  max-width: 400px; /* 円グラフの最大幅を制限 */
+  height: 400px; /* 円グラフの縦幅を調整 */
+  margin: 0;
+}
+
+.chart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-item span {
+  width: 150px; /* 項目名の幅を固定 */
+  font-weight: bold;
+}
+
+.chart-bar {
+  height: 20px;
+  background-color: #61dafb;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: width 0.5s ease-out;
+}
