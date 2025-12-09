@@ -1,16 +1,44 @@
-# React + Vite
+■ 家計簿アプリ（サンプル README）
+■ 概要
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React を用いて作成したシンプルな家計簿アプリです。
+日々の支出・収入を入力し、カテゴリ別に管理できるよう実装しています。
+月ごとの合計金額・カテゴリ集計を確認でき、シンプルで使いやすい家計簿を目指しています。
 
-Currently, two official plugins are available:
+■ 使用技術
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React
 
-## React Compiler
+JavaScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+HTML / CSS
 
-## Expanding the ESLint configuration
+Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+■ 主な機能
+
+支出／収入の登録（金額・カテゴリ・メモ）
+
+登録した一覧の表示・削除
+
+カテゴリ別集計（食費・日用品・交通費など）
+
+月ごとの合計金額表示
+
+ローカルストレージによるデータ保持
+
+■ 起動方法
+npm install
+npm run dev
+
+■ 今後の改善予定
+
+Firebase/外部 DB を使ったデータ保存
+
+グラフ（円グラフ・棒グラフ）による可視化
+
+月切り替え機能
+
+支出の検索・絞り込み機能
+
+UI デザインの改善（レスポンシブ対応）
